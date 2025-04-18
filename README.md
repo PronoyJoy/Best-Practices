@@ -76,3 +76,15 @@ Prevents downgrade attacks and cookie hijacking.
 🧱 Why?
  Prevents your site from being embedded in an <iframe> on another site.
  This protects against clickjacking attacks.
+
+
+# Database Postgres
+In .env file add DATABASE_URL
+And In settings.py file add 
+
+DATABASES = {
+    'default': env.db(default='sqlite:///db.sqlite3')
+}
+This part - This will pull the url and will get connected and if connection not established it will fall back to sqlite
+ 
+ 
